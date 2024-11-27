@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Popup</title>
+    <!-- ==============================================
+        Vendor Stylesheet
+        =============================================== -->
+    <link rel="stylesheet" href="assets/css/vendor/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/vendor/slider.min.css" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/vendor/icons.min.css" />
+    <link rel="stylesheet" href="assets/css/vendor/animation.min.css" />
+    <link rel="stylesheet" href="assets/css/vendor/gallery.min.css" />
+    <link rel="stylesheet" href="assets/css/vendor/cookie-notice.min.css" />
+    <link rel="stylesheet" href="assets/css/custom.css" />
+    <!-- ==============================================
+            Custom Stylesheet
+            =============================================== -->
+    <link rel="stylesheet" href="assets/css/default.css" />
+    <link rel="stylesheet" href="assets/css/theme-pink.css" />
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@23.8.1/build/css/intlTelInput.css">
+    <style>
+    .iti {
+        /* display: block !important; */
+        width: 100%;
+    }
+    .field-phone{
+        padding-left: 100px !important;
+    }
+
+    .iti__selected-country {
+        background: #f5f5f5;
+    }
+
+    </style> 
+
+    <style>
+
+      form {
+        display: flex;
+        flex-direction: column;
+      }
+      button {
+        padding: 10px;
+        cursor: pointer;
+      }
+      .primary-button{
+        z-index: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <form id="hubspot-form">
+      <div class="row align-items-center">
+        <div class="col-12 col-md-6 align-self-start text-center text-md-left">
+          <!-- Steps Group -->
+          <div class="row text-center form-content">
+            <div class="col-12 p-0">
+              <!-- Group 1 -->
+              <fieldset class="step-group">
+                <div class="row">
+                  <div class="col-12 input-group p-0">
+                    <input
+                      type="text"
+                      name="firstname"
+                      data-minlength="3"
+                      class="form-control field-name"
+                      placeholder="Name"
+                      required
+                    />
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-12 input-group p-0">
+                    <input
+                      type="email"
+                      name="email"
+                      data-minlength="3"
+                      class="form-control field-email"
+                      placeholder="Email"
+                      required
+                    />
+                  </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-12 input-group p-0">
+                      <!-- Country Code Input (Hidden) -->
+                      <input type="hidden" name="countrycode" id="countrycode">
+
+                      <!-- Phone Number Input -->
+                      <input
+                        id="phone"
+                        type="tel"
+                        name="phone"
+                        class="form-control field-phone"
+                        placeholder="Phone"
+                        required
+                      />
+                    </div>
+                  </div>
+                  
+                <!-- <div class="row">
+                  <div class="col-12 input-group p-0">
+                    <select
+                      id="course_title"
+                      name="course_title"
+                      class="form-control"
+                      required
+                    >
+                      <option value="">Select Course</option>
+                      <option
+                        value="Level 2 Diploma in Business Beginners in Cyber Security"
+                      >
+                        Level-3 - Award In Assessing Vocationally Related
+                        Achievement
+                      </option>
+                      <option
+                        value="Level 2 Diploma in Business Beginners in Cyber Security"
+                      >
+                        Level 4 & 5 Higher International Diploma in Psychology
+                      </option>
+                      <option
+                        value="Level 2 Diploma in Business Beginners in Cyber Security"
+                      >
+                        Level 4 & 5 Diploma in Information Technology
+                      </option>
+                      <option
+                        value="Level 2 Diploma in Business Beginners in Cyber Security"
+                      >
+                        Level 4 & 5 Diploma in Business Management
+                      </option>
+                      <option
+                        value="Level 2 Diploma in Business Beginners in Cyber Security"
+                      >
+                        Level 4 & 5 - Diploma in Accounting and Business
+                      </option>
+                      <option
+                        value="Level 2 Diploma in Business Beginners in Cyber Security"
+                      >
+                        Level 3 - Foundation Diploma in Accountancy
+                      </option>
+                      <option
+                        value="Level 2 Diploma in Business Beginners in Cyber Security"
+                      >
+                        Diploma in Hospitality and Tourism - Level 4 & 5
+                      </option>
+                      <option
+                        value="Level 2 Diploma in Business Beginners in Cyber Security"
+                      >
+                        Diploma in Education & Training - Level 4 & 5
+                      </option>
+                    </select>
+                  </div>
+                </div> -->
+                <div class="row">
+                    <div class="col-12 input-group p-0">
+                      <select
+                        id="course_title"
+                        name="course_title"
+                        class="form-control"
+                        required
+                      >
+                        <option value="">Select Course</option>
+                        <option
+                          value="Level-3 - Award In Assessing Vocationally Related Achievement"
+                        >
+                        Level-3 - Award In Assessing Vocationally Related Achievement
+                        </option>
+                        <option
+                          value="Level 2 Diploma in Business Beginners in Cyber Security"
+                        >
+                        Level 4 & 5 Higher International Diploma in Psychology
+                        </option>
+                        <option
+                          value="Level 2 Diploma in Business Beginners in Cyber Security"
+                        >
+                        Level 4 & 5 Diploma in Information Technology 
+                        </option>
+                        <option
+                          value="Level 2 Diploma in Business Beginners in Cyber Security"
+                        >
+                        Level 4 & 5 Diploma in Business Management
+                        </option>
+                        <option
+                          value="Level 2 Diploma in Business Beginners in Cyber Security"
+                        >
+                        Level 4 & 5 - Diploma in Accounting and Business
+                        </option>
+                        <option
+                          value="Level 2 Diploma in Business Beginners in Cyber Security"
+                        >
+                        Level 3 - Foundation Diploma in Accountancy
+                        </option>
+                        <option
+                          value="Level 2 Diploma in Business Beginners in Cyber Security"
+                        >
+                        Diploma in Hospitality and Tourism - Level 4 & 5
+                        </option>
+                        <option
+                          value="Level 2 Diploma in Business Beginners in Cyber Security"
+                        >
+                        Diploma in Education & Training - Level 4 & 5
+                        </option>
+                      </select>
+                    </div>
+                  </div>
+                <div class="col-12 input-group p-0">
+                  <button type="submit" class="btn primary-button">
+                    Submit<i class="icon-arrow-right-circle left"></i>
+                  </button>
+                </div>
+              </fieldset>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@23.8.1/build/js/intlTelInput.min.js"></script>
+  <script>
+    const input = document.querySelector("#phone");
+    window.intlTelInput(input, {
+      utilsScript: "https://cdn.jsdelivr.net/npm/intl-tel-input@23.8.1/build/js/utils.js",
+    });
+  </script>
+
+  
+  
+
+ 
+  <script>
+    // Initialize the intl-tel-input plugin
+    const phoneInputField = document.querySelector("#phone");
+    const iti = intlTelInput(phoneInputField, {
+      initialCountry: "ae", // Default to UAE (+971)
+      separateDialCode: true, // This separates the dial code from the rest of the number
+    });
+  
+    document.getElementById("hubspot-form").addEventListener("submit", async function (e) {
+      e.preventDefault();
+  
+      console.log("Form submission started.");
+  
+      const portalId = "46404285";
+      const formId = "3834910e-5a50-4a3d-98f8-d4c3307bfb14";
+  
+      // Ensure the phone number is valid before submission
+      if (iti.isValidNumber()) {
+        const fullPhoneNumber = iti.getNumber(); // Full phone number including country code
+        const countryCode = iti.getSelectedCountryData().dialCode; // Extract the dial code
+        const phoneNumber = iti.getNumber().replace(`+${countryCode}`, "").trim(); // Extract the phone number without the country code
+  
+        console.log("Full Phone Number:", fullPhoneNumber);
+        console.log("Country Code:", countryCode);
+        console.log("Phone Number:", phoneNumber);
+  
+        // Store the country code and phone number in hidden inputs if needed
+        document.querySelector('[name="countrycode"]').value = countryCode;
+        document.querySelector('[name="phone"]').value = phoneNumber;
+  
+        // Form data to be sent to HubSpot
+        const formData = {
+          fields: [
+            {
+              name: "firstname",
+              value: document.querySelector('[name="firstname"]').value,
+            },
+            {
+              name: "email",
+              value: document.querySelector('[name="email"]').value,
+            },
+            {
+              name: "phone",
+              value: fullPhoneNumber, // Use the full phone number with country code
+            },
+            {
+                  name: 'course_title',
+                  value: document.querySelector('[name="course_title"]').value
+                }
+          ],
+        };
+  
+        console.log("Form Data:", formData);
+  
+        const endpoint = `https://api.hsforms.com/submissions/v3/integration/submit/${portalId}/${formId}`;
+  
+        try {
+          const response = await fetch(endpoint, {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(formData),
+          });
+  
+          console.log("Response Status:", response.status);
+  
+          if (response.ok) {
+            // Notify user of successful submission
+            // alert('Form submitted successfully!');
+  
+            // Trigger PDF download and open
+            const pdfUrl = "assets/pdf/Diploma in Education and Training (Level 4 & 5).pdf"; // Replace with actual PDF path
+            const pdfName = "dip";
+            if (pdfUrl) {
+              const link = document.createElement("a");
+              link.href = pdfUrl;
+              link.download = pdfName; // Name for the downloaded file
+              document.body.appendChild(link);
+              link.click();
+              document.body.removeChild(link);
+  
+              // Open the PDF in a new tab
+              window.open(pdfUrl, "_blank");
+            } else {
+              alert("PDF URL is missing or incorrect.");
+            }
+
+  
+            // Clear the form
+            document.getElementById("hubspot-form").reset();
+            iti.setNumber(''); // Reset the intl-tel-input field
+          } else {
+            alert("There was an error submitting the form.");
+          }
+        } catch (error) {
+          console.error("Error:", error);
+          alert("There was an error submitting the form.");
+        }
+      } else {
+        console.error("Invalid phone number.");
+        alert("Please enter a valid phone number.");
+      }
+    });
+
+
+
+
+
+  </script>
+  
+  <!-- <script>
+    // Initialize the intl-tel-input plugin
+    const phoneInputField = document.querySelector("#phone");
+    const iti = intlTelInput(phoneInputField, {
+      initialCountry: "ae", // Default to UAE (+971)
+      separateDialCode: true, // This separates the dial code from the rest of the number
+    });
+  
+    document.getElementById("hubspot-form").addEventListener("submit", async function (e) {
+      e.preventDefault();
+  
+      console.log("Form submission started.");
+  
+      const portalId = "46404285";
+      const formId = "3834910e-5a50-4a3d-98f8-d4c3307bfb14";
+  
+      // Ensure the phone number is valid before submission
+      if (iti.isValidNumber()) {
+        const fullPhoneNumber = iti.getNumber(); // Full phone number including country code
+        const countryCode = iti.getSelectedCountryData().dialCode; // Extract the dial code
+        const phoneNumber = iti.getNumber().replace(`+${countryCode}`, "").trim(); // Extract the phone number without the country code
+  
+        console.log("Full Phone Number:", fullPhoneNumber);
+        console.log("Country Code:", countryCode);
+        console.log("Phone Number:", phoneNumber);
+  
+        // Store the country code and phone number in hidden inputs if needed
+        document.querySelector('[name="countrycode"]').value = countryCode;
+        document.querySelector('[name="phone"]').value = phoneNumber;
+  
+        // Form data to be sent to HubSpot
+        const formData = {
+          fields: [
+            {
+              name: "firstname",
+              value: document.querySelector('[name="firstname"]').value,
+            },
+            {
+              name: "email",
+              value: document.querySelector('[name="email"]').value,
+            },
+            {
+              name: "phone",
+              value: fullPhoneNumber, // Use the full phone number with country code
+            },
+            {
+              name: 'course_title',
+              value: document.querySelector('[name="course_title"]').value
+            }
+          ],
+        };
+  
+        console.log("Form Data:", formData);
+  
+        const endpoint = `https://api.hsforms.com/submissions/v3/integration/submit/${portalId}/${formId}`;
+  
+        try {
+          const response = await fetch(endpoint, {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(formData),
+          });
+  
+          console.log("Response Status:", response.status);
+  
+        //   if (response.ok) {
+        //     // Determine the PDF URL and name based on the current page URL
+        //     const pdfUrl = getPdfUrlForPage();
+        //     const pdfName = getPdfNameForPage();
+  
+        //     console.log("PDF URL:", pdfUrl);
+        //     console.log("PDF Name:", pdfName);
+  
+        //     if (pdfUrl && pdfName) {
+        //       // Trigger PDF download
+        //       const link = document.createElement("a");
+        //       link.href = pdfUrl;
+        //       link.download = pdfName; // Name for the downloaded file
+        //       document.body.appendChild(link);
+        //       link.click();
+        //       document.body.removeChild(link);
+  
+        //       // Open the PDF in a new tab
+        //       window.open(pdfUrl, "_blank");
+        //     } else {
+        //       alert("PDF URL is missing or incorrect.");
+        //     }
+        if (response.ok) {
+          // Determine the PDF URL and name based on the query parameter
+          const course = new URLSearchParams(window.location.search).get('course');
+          const pdfUrl = getPdfUrlForCourse(course);
+          const pdfName = getPdfNameForCourse(course);
+
+          console.log("PDF URL:", pdfUrl);
+          console.log("PDF Name:", pdfName);
+
+          if (pdfUrl && pdfName) {
+            // Trigger PDF download
+            const link = document.createElement("a");
+            link.href = pdfUrl;
+            link.download = pdfName; // Name for the downloaded file
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+
+            // Open the PDF in a new tab
+            window.open(pdfUrl, "_blank");
+          } else {
+            alert("PDF URL is missing or incorrect.");
+          }
+            // Clear the form
+            document.getElementById("hubspot-form").reset();
+            iti.setNumber(''); // Reset the intl-tel-input field
+          } else {
+            alert("There was an error submitting the form.");
+          }
+        } catch (error) {
+          console.error("Error:", error);
+          alert("There was an error submitting the form.");
+        }
+      } else {
+        console.error("Invalid phone number.");
+        alert("Please enter a valid phone number.");
+      }
+    });
+  
+    function getPdfUrlForCourse(course) {
+    // Determine the PDF URL based on the course query parameter
+    switch (course) {
+      case 'level-4&5-diploma-in-accounting-and-business.html':
+        return 'assets/pdf/Diploma in Education and Training (Level 4 & 5).pdf';
+      case 'it':
+        return 'assets/pdf/level4-5-it.pdf';
+      case 'another-course':
+        return 'assets/pdf/another-course.pdf';
+      // Add more cases as needed
+      default:
+        return ''; // Fallback if no match
+    }
+  }
+
+  function getPdfNameForCourse(course) {
+    // Determine the PDF name based on the course query parameter
+    switch (course) {
+      case 'level-4&5-diploma-in-accounting-and-business':
+        return 'level4-5-accounting-business.pdf';
+      case 'it':
+        return 'level4-5-it.pdf';
+      case 'another-course':
+        return 'another-course.pdf';
+      // Add more cases as needed
+      default:
+        return 'default.pdf'; // Fallback if no match
+    }
+  }
+  </script> -->
+  
+  </body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Index</title>
+  <style>
+    /* Basic styles */
+    .hero {
+      padding: 100px;
+      background-color: #f0f0f0;
+    }
+
+    .primary-button {
+      padding: 10px 20px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+
+    /* Styles for the modal */
+    .modal-overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 9999;
+    }
+
+    .modal {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: white;
+      padding: 20px;
+      box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+      z-index: 10000;
+      width: 90%;
+      max-width: 500px;
+      border-radius: 8px;
+    }
+
+    .close-modal {
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      cursor: pointer;
+      font-size: 1.5rem;
+    }
+
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+  </style>
+</head>
+<body>
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Hero Section</h1>
+    <button type="button" class="primary-button" id="open-modal">Download Brochure</button>
+  </section>
+
+  <!-- Modal structure -->
+  <div class="modal-overlay" id="modal-overlay"></div>
+  <div class="modal" id="modal">
+    <span class="close-modal" id="close-modal">&times;</span>
+    <iframe src="popup.html"></iframe>
+  </div>
+
+  <script>
+    // Get elements
+    const openModalBtn = document.getElementById('open-modal');
+    const closeModalBtn = document.getElementById('close-modal');
+    const modalOverlay = document.getElementById('modal-overlay');
+    const modal = document.getElementById('modal');
+
+    // Open modal on button click
+    openModalBtn.addEventListener('click', function () {
+      modalOverlay.style.display = 'block';
+      modal.style.display = 'block';
+    });
+
+    // Close modal on overlay or close button click
+    closeModalBtn.addEventListener('click', function () {
+      modalOverlay.style.display = 'none';
+      modal.style.display = 'none';
+    });
+
+    modalOverlay.addEventListener('click', function () {
+      modalOverlay.style.display = 'none';
+      modal.style.display = 'none';
+    });
+  </script>
+</body>
+</html>

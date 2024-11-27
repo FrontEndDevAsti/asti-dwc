@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dynamic Courses</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    .course-section {
+      border: 1px solid #ccc;
+      padding: 20px;
+      margin: 20px 0;
+    }
+
+    h3,
+    h4 {
+      color: #333;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    table th,
+    table td {
+      border: 1px solid #ccc;
+      padding: 10px;
+    }
+
+    table th {
+      background-color: #f0f0f0;
+    }
+
+    ul {
+      list-style-type: disc;
+      padding-left: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div id="course-section"></div>
+
+  <script>
+    // Course data (constant file)
+    const courses = [
+      {
+        id: 1,
+        title: "Business Management",
+        intro: "Business Management course introduction...",
+        objective: "Business Management course objective...",
+        modules: [
+          { code: "BUS 1.1", title: "Communication in an Organization", credits: 20 },
+          { code: "BUS 1.2", title: "Leadership and the Organization", credits: 20 },
+          // Add more modules...
+        ],
+        specification: {
+          qualificationTitle: "Diploma In Business Management",
+          level: "UK Level 5",
+          accreditationStatus: "Accredited",
+          creditEquivalence: "240 Credits",
+          recognition: "Globally Recognized",
+        },
+        learningOutcomes: [
+          "Market Research Analyst",
+          "Business Risk Analyst",
+          "Project Manager",
+          "Business Development Manager",
+        ],
+        path: "/business-management", // URL path for this course
+      },
+      {
+        id: 2,
+        title: "Information Technology",
+        intro: "Information Technology course introduction...",
+        objective: "Information Technology course objective...",
+        modules: [
+          { code: "IT 1.1", title: "Introduction to IT", credits: 20 },
+          { code: "IT 1.2", title: "Programming Basics", credits: 20 },
+          // Add more modules...
+        ],
+        specification: {
+          qualificationTitle: "Diploma In Information Technology",
+          level: "UK Level 5",
+          accreditationStatus: "Accredited",
+          creditEquivalence: "240 Credits",
+          recognition: "Globally Recognized",
+        },
+        learningOutcomes: [
+          "Software Developer",
+          "Systems Analyst",
+          "Network Engineer",
+          "IT Consultant",
+        ],
+        path: "/information-technology", // URL path for this course
+      },
+      // Add more courses with their respective paths...
+    ];
+
+    // Function to dynamically generate and insert HTML for a single course
+    function renderCourse(course) {
+      const courseSection = document.getElementById("course-section");
+      const courseHTML = `
+        <section class="course-section">
+          <h3>Course Intro: ${course.title}</h3>
+          <p>${course.intro}</p>
+
+          <section class="content-section">
+            <h4>Course Overview</h4>
+            <p>${course.objective}</p>
+          </section>
+
+          <section class="content-section">
+            <h4>Course Module</h4>
+            <table>
+              <thead>
+                <tr>
+                  <th>S.no</th>
+                  <th>Unit Title</th>
+                  <th>Credits</th>
+                </tr>
+              </thead>
+              <tbody>
+                ${course.modules
+                  .map(
+                    (module, index) => `
+                  <tr>
+                    <td>${index + 1}</td>
+                    <td>${module.title}</td>
+                    <td>${module.credits} Credits</td>
+                  </tr>`
+                  )
+                  .join("")}
+              </tbody>
+            </table>
+          </section>
+
+          <section class="content-section">
+            <h4>Course Specification</h4>
+            <table>
+              <tbody>
+                <tr>
+                  <td>Qualification Title</td>
+                  <td>${course.specification.qualificationTitle}</td>
+                </tr>
+                <tr>
+                  <td>Level</td>
+                  <td>${course.specification.level}</td>
+                </tr>
+                <tr>
+                  <td>Accreditation</td>
+                  <td>${course.specification.accreditationStatus}</td>
+                </tr>
+                <tr>
+                  <td>Credit Equivalence</td>
+                  <td>${course.specification.creditEquivalence}</td>
+                </tr>
+                <tr>
+                  <td>Recognition</td>
+                  <td>${course.specification.recognition}</td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+
+          <section class="content-section">
+            <h4>Learning Outcomes</h4>
+            <ul>
+              ${course.learningOutcomes
+                .map((outcome) => `<li>${outcome}</li>`)
+                .join("")}
+            </ul>
+          </section>
+        </section>
+      `;
+
+      // Insert the courseHTML into the page
+      courseSection.innerHTML = courseHTML;
+    }
+
+    // Function to check the current path and display the correct course
+    function renderCourseBasedOnPath() {
+      const currentPath = window.location.pathname;
+      // Remove trailing slash if present
+      const normalizedPath = currentPath.endsWith('/')
+        ? currentPath.slice(0, -1)
+        : currentPath;
+
+      const course = courses.find((c) => c.path === normalizedPath);
+
+      if (course) {
+        renderCourse(course);
+      } else {
+        document.getElementById("course-section").innerHTML = "<p>Course not found!</p>";
+      }
+    }
+
+    // Call the function to render the course based on the current URL path
+    renderCourseBasedOnPath();
+  </script>
+</body>
+</html>

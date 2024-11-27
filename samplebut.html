@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Form Popup</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+    }
+
+    .popup {
+      display: none;
+      position: fixed;
+      z-index: 1;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgb(0, 0, 0);
+      background-color: rgba(0, 0, 0, 0.4);
+    }
+
+    .popup-content {
+      background-color: #fefefe;
+      margin: 15% auto;
+      padding: 20px;
+      border: 1px solid #888;
+      width: 80%;
+      max-width: 500px;
+      text-align: left;
+    }
+
+    .close {
+      color: #aaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    .close:hover,
+    .close:focus {
+      color: black;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    label {
+      margin: 10px 0 5px;
+    }
+
+    input {
+      padding: 8px;
+      margin-bottom: 10px;
+    }
+
+    button[type="submit"] {
+      padding: 10px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    button[type="submit"]:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <button id="openPopup">Download Brochure</button>
+
+  <div id="popupForm" class="popup">
+    <div class="popup-content">
+      <span class="close">&times;</span>
+      <h2>Contact Details</h2>
+      <form id="contactForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <label for="phone">Phone:</label>
+        <input type="tel" id="phone" name="phone" required>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const openPopupButton = document.getElementById('openPopup');
+      const popup = document.getElementById('popupForm');
+      const closeButton = document.querySelector('.close');
+      const contactForm = document.getElementById('contactForm');
+
+      openPopupButton.addEventListener('click', () => {
+        popup.style.display = 'block';
+      });
+
+      closeButton.addEventListener('click', () => {
+        popup.style.display = 'none';
+      });
+
+      window.addEventListener('click', (event) => {
+        if (event.target === popup) {
+          popup.style.display = 'none';
+        }
+      });
+
+      contactForm.addEventListener('submit', (event) => {
+        event.preventDefault();
+        
+        // Get the contact details
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const phone = document.getElementById('phone').value;
+
+        // Hide the popup
+        popup.style.display = 'none';
+
+        // Trigger the download
+        const link = document.createElement('a');
+        link.href = 'assets/pdf/Diploma in Education and Training (Level 4 & 5).pdf';  // Change this to the path of your PDF file
+        link.download = 'Diploma in Education and Training (Level 4 & 5).pdf';  // Change this to the desired download filename
+        document.body.appendChild(link);  // Append the link to the body
+        link.click();  // Simulate a click on the link
+        document.body.removeChild(link);  // Remove the link from the body
+      });
+    });
+  </script>
+</body>
+</html>
