@@ -26,11 +26,18 @@
     <!-- End Google Tag Manager  -->
 
     <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-K6X9DPPX');</script>
+    <!-- <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-K6X9DPPX");
+    </script> -->
     <!-- End Google Tag Manager -->
 
     <title>
@@ -88,6 +95,55 @@
 
     <style>
       /* Basic styles */
+      .custom-card-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 30px;
+      }
+
+      .custom-card {
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        max-width: 320px;
+      }
+
+      .custom-card-header {
+        background-color: #d6d8db;
+        padding: 10px;
+        border-radius: 10px 10px 0 0;
+        font-weight: bold;
+        text-align: center;
+      }
+
+      .custom-card-body {
+        padding: 20px;
+      }
+
+      .custom-card-body ul li {
+        margin-bottom: 10px;
+        /* color: #6f6f6f; */
+      }
+
+      .custom-margin-bottom {
+        margin-bottom: 0px !important;
+      }
+
+      .custom-box-container {
+        background-color: #d6d8db;
+        padding: 20px;
+        border-radius: 20px;
+      }
+
+      .custom-pt {
+        padding-top: 50px !important;
+      }
+
+      .text-start {
+        text-align: left;
+      }
 
       /* Styles for the modal */
       .modal-overlay {
@@ -810,11 +866,7 @@
           </div>
         </div>
 
-        <!-- <section
-          id="section3"
-          style="background-color: #fff"
-        > -->
-        <div class="container">
+        <div class="container content-section">
           <div class="row">
             <div class="col-12 col-md-12">
               <h3 class="text-center">Expertise in</h3>
@@ -826,16 +878,134 @@
             style="display: flex; justify-content: center; align-items: center"
           >
             <div class="divided-col-item" style="margin: 10px; padding: 10px">
-              <a href="assets/images/data-analysis-expertises.webp">
+              <a href="assets/images/data-analysis-glance.webp">
                 <img
-                  src="assets/images/data-analysis-expertises.webp"
+                  src="assets/images/data-analysis-glance.webp"
                   alt="data-analysis"
                 />
               </a>
             </div>
           </div>
         </div>
-        <!-- </section> -->
+
+        <div
+          class="container content-section text-start custom-pt"
+          id="section3"
+        >
+          <div class="row">
+            <div class="col-12 col-md-12 mt-5">
+              <h3 class="text-center">Course Modules</h3>
+            </div>
+          </div>
+
+          <div class="custom-card-container">
+            <!-- Python Card -->
+            <div class="custom-card">
+              <div class="custom-card-header">PYTHON</div>
+              <div class="custom-card-body">
+                <ul>
+                  <li>Introduction to programming.</li>
+                  <li>Data types, Operators, Conditional statements.</li>
+                  <li>
+                    Loops, Functions, Recursion, lambdas, List Comprehensions.
+                  </li>
+                  <li>
+                    Classes and Objects, Exception Handling, Modules, Packages.
+                  </li>
+                  <li>String handling, Manipulations.</li>
+                  <li>Numpy, Pandas, Matplotlib, and Seaborn.</li>
+                  <li>Project Work with Assessments.</li>
+                </ul>
+              </div>
+            </div>
+            <!-- Power BI Card -->
+            <div class="custom-card">
+              <div class="custom-card-header">POWER BI</div>
+              <div class="custom-card-body">
+                <ul>
+                  <li>
+                    Connecting to data sources, Creating dashboards and reports.
+                  </li>
+                  <li>Creating visualizations: Bar charts, Pie charts, etc.</li>
+                  <li>Real-time data streaming capabilities.</li>
+                  <li>
+                    Relationships between tables and measures, and use DAX
+                    formulas.
+                  </li>
+                  <li>
+                    Advanced features: Calculations, Drill-through, and
+                    Hierarchies.
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <!-- SQL Card -->
+            <div class="custom-card">
+              <div class="custom-card-header">SQL</div>
+              <div class="custom-card-body">
+                <ul>
+                  <li>Database Management System.</li>
+                  <li>RDBMS and Non RDBMS.</li>
+                  <li>MySQL, NoSQL, PostGreySQL.</li>
+                  <li>DDL, DML, DQL, DCL.</li>
+                  <li>Schema.</li>
+                  <li>Joins, Nested Joins.</li>
+                  <li>SQL query Optimization.</li>
+                </ul>
+              </div>
+            </div>
+            <!-- Looker Studio Card -->
+            <div class="custom-card">
+              <div class="custom-card-header">LOOKER STUDIO</div>
+              <div class="custom-card-body">
+                <ul>
+                  <li>
+                    Connecting to data sources, Creating dashboards and reports.
+                  </li>
+                  <li>Exploring data: Views, Fields, and Filters.</li>
+                  <li>Advanced features: Derived tables.</li>
+                  <li>Merged queries, and LookML.</li>
+                  <li>Dash-Boarding.</li>
+                  <li>Analytics.</li>
+                  <li>Dynamic Data Sync using Google Sheets.</li>
+                </ul>
+              </div>
+            </div>
+            <!-- MS-Excel Card -->
+            <div class="custom-card">
+              <div class="custom-card-header">MS-EXCEL</div>
+              <div class="custom-card-body">
+                <ul>
+                  <li>
+                    Introduction to Excel, Advanced Functions, and Formulas.
+                  </li>
+                  <li>
+                    Data Analysis using pivot tables and Visualization
+                    techniques.
+                  </li>
+                  <li>Advanced Chart Techniques and dashboarding.</li>
+                  <li>
+                    Import data from a range of sources, including text files,
+                    databases.
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <!-- Projects Card -->
+            <div class="custom-card">
+              <div class="custom-card-header">PROJECTS</div>
+              <div class="custom-card-body">
+                <ul>
+                  <li>
+                    The final project will give students the opportunity to
+                    demonstrate their understanding of the tools by using one of
+                    the tools to create a project.
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
 
         <div id="section4" class="content-section">
           <div class="row">
@@ -850,22 +1020,25 @@
                     border-spacing: 0 !important;
                   "
                 >
-                <thead class="table-secondary">
+                  <thead class="table-secondary">
                     <tr>
                       <th>Duration</th>
-                      <th>Eligibility</th>
-                      <th>Accreditation</th>
-                      <th>Mode of Delivery</th>
-                      <th>Tuition Fees</th>
+                      <th>Class Duration</th>
+                      <th>Key Features</th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr>
-                      <td> 4 Months </td>
-                      <td>Students or working professionals with a Programming/statistics background</td>
-                      <td>Internationally recognized certification</td>
-                      <td>Online learning </td>
-                      <td>Affordable pricing with flexible payment plans available.</td>
+                      <td>3-4 Months</td>
+                      <td>1.5 HRS. (Mon-Sat)</td>
+                      <td>
+                        <ul>
+                          <li>Real time use cases and projects included.</li>
+                          <li>Assured Job and Internship Opportunities</li>
+                          <li>Training material with Exercises.</li>
+                          <li>Assignments and Quizzes.</li>
+                        </ul>
+                      </td>
                     </tr>
                   </tbody>
                 </table>
@@ -1024,24 +1197,93 @@
         </div>
       </div>
     </section>
+
     <section
-      id="about"
-      class="section-1 highlights image-right"
-      style="padding: 40px 0"
+      class="highlights"
+      style="padding: 40px 0; background-color: white"
     >
       <div class="container">
-        <div class="row">
-          <div class="col-12 col-md-12 align-self-center text-center">
-            <div class="row intro">
-              <div class="col-12 p-0">
-                <h3 class="featured alt">UK Level System</h3>
-                <img src="assets/images/uk-level.png" />
-              </div>
+        <div
+          class="custom-box-container row justify-content-center text-center items"
+        >
+          <div class="col-12 col-md-6 col-lg-4 item custom-margin-bottom">
+            <div class="card p-0 no-hover">
+              <i class="icon fas fa-hand-holding-usd"></i>
+              <h4>High Paying Salaries</h4>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4 item custom-margin-bottom">
+            <div class="card p-0 no-hover">
+              <i class="icon fas fa-laptop-code"></i>
+              <h4>Most Demanding Technology</h4>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4 item custom-margin-bottom">
+            <div class="card p-0 no-hover">
+              <i class="icon fas fa-lightbulb"></i>
+              <h4>Versatile Applications</h4>
             </div>
           </div>
         </div>
       </div>
     </section>
+
+    <div id="section6" style="background-color: #fff">
+      <div class="container py-5">
+        <div class="col-12 col-md-12">
+          <h3 class="text-center m-0">Also Includes</h3>
+          <div class="row mt-4 justify-content-center">
+            <ul class="col-md-4 list-unstyled">
+              <li
+                class="mb-3 d-flex align-items-center"
+                style="font-size: 1.2rem"
+              >
+                <i class="fa fa-play mr-2" aria-hidden="true"></i> Doubt
+                Clearing Sessions
+              </li>
+              <li
+                class="mb-3 d-flex align-items-center"
+                style="font-size: 1.2rem"
+              >
+                <i class="fa fa-play mr-2" aria-hidden="true"></i> Mentorship
+                Sessions
+              </li>
+              <li
+                class="mb-3 d-flex align-items-center"
+                style="font-size: 1.2rem"
+              >
+                <i class="fa fa-play mr-2" aria-hidden="true"></i> Real Time
+                Projects
+              </li>
+            </ul>
+            <ul class="col-md-4 list-unstyled">
+              <li
+                class="mb-3 d-flex align-items-center"
+                style="font-size: 1.2rem"
+              >
+                <i class="fa fa-play mr-2" aria-hidden="true"></i> Full Day
+                Practice Labs
+              </li>
+              <li
+                class="mb-3 d-flex align-items-center"
+                style="font-size: 1.2rem"
+              >
+                <i class="fa fa-play mr-2" aria-hidden="true"></i> Industry
+                Expert Guest Lectures
+              </li>
+              <li
+                class="mb-3 d-flex align-items-center"
+                style="font-size: 1.2rem"
+              >
+                <i class="fa fa-play mr-2" aria-hidden="true"></i>Internship &
+                Job Opportunities
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- Features -->
     <section
       id="features"
@@ -1051,7 +1293,7 @@
       <div class="container">
         <h3 class="text-center">Why Choose ASTI Online for Data Analysis?</h3>
         <div class="row justify-content-center text-center items">
-          <div class="col-12 col-md-6  item">
+          <div class="col-12 col-md-6 item">
             <div class="card no-hover">
               <i class="icon icon-globe"></i>
               <h4>Experienced Faculty</h4>
@@ -1089,7 +1331,6 @@
       </div>
     </section>
     <!-- Features -->
-
 
     <section id="subscribe" class="section-6 subscribe">
       <div class="container smaller">
@@ -1408,9 +1649,8 @@
               <i class="icon icon-globe"></i>
               <h4>High Demand</h4>
               <p>
-                Data analysis is one of the fastest-growing
-                fields, with global demand for skilled professionals outpacing
-                supply.
+                Data analysis is one of the fastest-growing fields, with global
+                demand for skilled professionals outpacing supply.
               </p>
             </div>
           </div>
@@ -1419,9 +1659,8 @@
               <i class="icon icon-basket"></i>
               <h4>Lucrative Career Paths</h4>
               <p>
-                Professionals in data analysis
-                get competitive salaries and diverse career opportunities across
-                industries.
+                Professionals in data analysis get competitive salaries and
+                diverse career opportunities across industries.
               </p>
             </div>
           </div>
@@ -1430,21 +1669,18 @@
               <i class="icon icon-screen-smartphone"></i>
               <h4>Global Impact</h4>
               <p>
-                Data analysis skills are acceptable across
-                industries and places.
+                Data analysis skills are acceptable across industries and
+                places.
               </p>
             </div>
           </div>
           <div class="col-12 col-md-6 col-lg-6 item">
             <div class="card no-hover">
               <i class="icon icon-layers"></i>
-              <h4 style="white-space: nowrap">
-                Continuous Learning
-              </h4>
+              <h4 style="white-space: nowrap">Continuous Learning</h4>
               <p>
-                The field of data analysis is
-                constantly evolving, offering opportunities for lifelong
-                learning.
+                The field of data analysis is constantly evolving, offering
+                opportunities for lifelong learning.
               </p>
             </div>
           </div>
@@ -1453,28 +1689,27 @@
     </section>
 
     <section
-    id="features"
-    class="offers"
-    style="background-color: #000 !important; padding: 20px 0"
-  >
-    <div class="container">
-      <div class="row justify-content-center items">
-        <div class="col-12 col-md-12 col-lg-12" style="display: flex">
-          <h4 style="color: #ff0101">
-            We have changed the lives of over 300,000 students since 1995. Now
-            it’s your turn!
-          </h4>
-          &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<a
-            href="tel:+971549909777"
-            class="btn primary-button"
-          >
-            Call Now</a
-          >
+      id="features"
+      class="offers"
+      style="background-color: #000 !important; padding: 20px 0"
+    >
+      <div class="container">
+        <div class="row justify-content-center items">
+          <div class="col-12 col-md-12 col-lg-12" style="display: flex">
+            <h4 style="color: #ff0101">
+              We have changed the lives of over 300,000 students since 1995. Now
+              it’s your turn!
+            </h4>
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<a
+              href="tel:+971549909777"
+              class="btn primary-button"
+            >
+              Call Now</a
+            >
+          </div>
         </div>
       </div>
-    </div>
-  </section>
-  
+    </section>
 
     <!-- Testimonials -->
     <section

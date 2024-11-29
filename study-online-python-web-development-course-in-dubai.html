@@ -11,7 +11,7 @@
 
     <!--[if IE]><meta http-equiv="x-ua-compatible" content="IE=9" /><![endif]-->
     <!-- Google Tag Manager -->
-    <script>
+    <!-- <script>
       (function (w, d, s, l, i) {
         w[l] = w[l] || [];
         w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
@@ -22,7 +22,7 @@
         j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
         f.parentNode.insertBefore(j, f);
       })(window, document, "script", "dataLayer", "GTM-K6X9DPPX");
-    </script>
+    </script> -->
     <!-- End Google Tag Manager -->
 
     <title>
@@ -80,7 +80,55 @@
 
     <style>
       /* Basic styles */
+      .custom-card-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 30px;
+      }
 
+      .custom-card {
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        max-width: 320px;
+      }
+
+      .custom-card-header {
+        background-color: #d6d8db;
+        padding: 10px;
+        border-radius: 10px 10px 0 0;
+        font-weight: bold;
+        text-align: center;
+      }
+
+      .custom-card-body {
+        padding: 20px;
+      }
+
+      .custom-card-body ul li {
+        margin-bottom: 10px;
+        /* color: #6f6f6f; */
+      }
+
+      .custom-margin-bottom {
+        margin-bottom: 0px !important;
+      }
+
+      .custom-box-container {
+        background-color: #d6d8db;
+        padding: 20px;
+        border-radius: 20px;
+      }
+
+      .custom-pt {
+        padding-top: 50px !important;
+      }
+
+      .text-start{
+      text-align: left;
+    }
       /* Styles for the modal */
       .modal-overlay {
         display: none;
@@ -654,7 +702,7 @@
           <div class="col-md-6 divided-col">
             <div class="divided-col-item">
               <h4>Program Duration</h4>
-              <span>5 Months</span>
+              <span>4 Months</span>
             </div>
           </div>
           <!-- <div class="col-md-3 divided-col">
@@ -851,10 +899,6 @@
           </div>
         </div>
 
-        <!-- <section
-          id="section3"
-          style="background-color: #fff"
-        > -->
         <div class="container">
           <div class="row">
             <div class="col-12 col-md-12">
@@ -867,16 +911,145 @@
             style="display: flex; justify-content: center; align-items: center"
           >
             <div class="divided-col-item" style="margin: 10px; padding: 10px">
-              <a href="assets/images/python-expertises.webp">
+              <a href="assets/images/python-glance.webp">
                 <img
-                  src="assets/images/python-expertises.webp"
+                  src="assets/images/python-glance.webp"
                   alt="data-analysis"
                 />
               </a>
             </div>
           </div>
         </div>
-        <!-- </section> -->
+
+        <div class="container content-section text-start custom-pt" id="section3">
+          <div class="row">
+            <div class="col-12 col-md-12 mt-5">
+              <h3 class="text-center">Course Modules</h3>
+            </div>
+          </div>
+
+          <div class="custom-card-container">
+            <!-- HTML/CSS Card -->
+            <div class="custom-card">
+              <div class="custom-card-header">HTML | CSS</div>
+              <div class="custom-card-body">
+                <ul>
+                  <li>HTML5 Semantic Elements</li>
+                  <li>CSS Grid and Flexbox</li>
+                  <li>Responsive Design, CSS Preprocessors (Sass, LESS)</li>
+                  <li>Cross-browser Compatibility, Media Queries</li>
+                  <li>Web Accessibility (a11y)</li>
+                  <li>CSS Animation</li>
+                  <li>Advanced Selectors</li>
+                  <li>Performance Optimisation</li>
+                  <li>Project Work - 1</li>
+                </ul>
+              </div>
+            </div>
+            <!-- JavaScript Card -->
+            <div class="custom-card">
+              <div class="custom-card-header">JAVASCRIPT</div>
+              <div class="custom-card-body">
+                <ul>
+                  <li>
+                    Introduction to JavaScript: Variables, Functions, data types
+                  </li>
+                  <li>
+                    First-class citizens, Operators, Loops, Conditional
+                    statements
+                  </li>
+                  <li>Objects in JS, Ways to create Objects, Reflection</li>
+                  <li>
+                    Advanced: Closures, this keyword, Modules (traditional and
+                    modern)
+                  </li>
+                  <li>ES6, Callbacks, Promises, Async and Await & Generator</li>
+                </ul>
+              </div>
+            </div>
+            <!-- Python Card -->
+            <div class="custom-card">
+              <div class="custom-card-header">PYTHON</div>
+              <div class="custom-card-body">
+                <ul>
+                  <li>Introduction to programming</li>
+                  <li>Data types, Operators, Conditional statements</li>
+                  <li>
+                    Loops, Functions, Recursion, lambdas, List Comprehensions
+                  </li>
+                  <li>
+                    Classes and Objects, Exception Handling, Modules, Packages
+                  </li>
+                  <li>String handling, Manipulations</li>
+                  <li>Numpy, Pandas, Matplotlib and Seaborn</li>
+                  <li>Project Work with Assessments</li>
+                </ul>
+              </div>
+            </div>
+            <!-- Django Card -->
+            <div class="custom-card">
+              <div class="custom-card-header">DJANGO</div>
+              <div class="custom-card-body">
+                <ul>
+                  <li>
+                    Introduction to Django: Setting up projects, understanding
+                    the structure
+                  </li>
+                  <li>
+                    Working with models, migrations, templates, forms, and the
+                    admin interface
+                  </li>
+                  <li>
+                    Advanced Django Features: Using the Django REST Framework
+                    for API development
+                  </li>
+                  <li>
+                    Implementing authentication and permissions, signals, and
+                    middleware
+                  </li>
+                  <li>Deployment and Optimization</li>
+                </ul>
+              </div>
+            </div>
+            <!-- Flask Card -->
+            <div class="custom-card">
+              <div class="custom-card-header">FLASK</div>
+              <div class="custom-card-body">
+                <ul>
+                  <li>
+                    Introduction to Flask: Setting up the environment, creating
+                    routes
+                  </li>
+                  <li>
+                    Handling HTTP requests, working with templates (Jinja2),
+                    handling forms, and user inputs
+                  </li>
+                  <li>Database Integration: Using Flask-SQLAlchemy</li>
+                  <li>
+                    Advanced Flask Features: Implementing authentication and
+                    authorization (login sessions, JWT)
+                  </li>
+                  <li>Building RESTful APIs</li>
+                </ul>
+              </div>
+            </div>
+            <!-- SQL Card -->
+            <div class="custom-card">
+              <div class="custom-card-header">SQL</div>
+              <div class="custom-card-body">
+                <ul>
+                  <li>Database Management System</li>
+                  <li>RDBMS and Non RDBMS</li>
+                  <li>MySQL, NoSQL, PostGreySQL</li>
+                  <li>DDL, DML, DQL, DCL</li>
+                  <li>Schema</li>
+                  <li>Joins, Nested Joins</li>
+                  <li>SQL query Optimisation</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
 
         <div id="section4" class="content-section">
           <div class="row">
@@ -894,24 +1067,21 @@
                   <thead class="table-secondary">
                     <tr>
                       <th>Duration</th>
-                      <th>Eligibility</th>
-                      <th>Accreditation</th>
-                      <th>Mode of Delivery</th>
-                      <th>Tuition Fees</th>
+                      <th>Class Duration</th>
+                      <th>Key Features</th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr>
-                      <td>5 Months</td>
+                      <td>4 Months</td>
+                      <td>1.5 HRS. (Mon-Sat)</td>
                       <td>
-                        Students or working professionals with skills in
-                        mathematics, statistics, computer science
-                      </td>
-                      <td>Internationally recognized certification</td>
-                      <td>Online learning</td>
-                      <td>
-                        Affordable pricing with flexible payment plans
-                        available.
+                        <ul>
+                          <li>Real time use cases and projects included.</li>
+                          <li>Assured Job and Internship Opportunities</li>
+                          <li>Training material with Exercises.</li>
+                          <li>Assignments and Quizzes.</li>
+                        </ul>
                       </td>
                     </tr>
                   </tbody>
@@ -975,24 +1145,93 @@
         </div>
       </div>
     </section>
+
     <section
-      id="about"
-      class="section-1 highlights image-right"
-      style="padding: 40px 0"
+      class="highlights"
+      style="padding: 40px 0; background-color: white"
     >
       <div class="container">
-        <div class="row">
-          <div class="col-12 col-md-12 align-self-center text-center">
-            <div class="row intro">
-              <div class="col-12 p-0">
-                <h3 class="featured alt">UK Level System</h3>
-                <img src="assets/images/uk-level.png" />
-              </div>
+        <div
+          class="custom-box-container row justify-content-center text-center items"
+        >
+          <div class="col-12 col-md-6 col-lg-4 item custom-margin-bottom">
+            <div class="card p-0 no-hover">
+              <i class="icon fas fa-hand-holding-usd"></i>
+              <h4>High Paying Salaries</h4>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4 item custom-margin-bottom">
+            <div class="card p-0 no-hover">
+              <i class="icon fas fa-laptop-code"></i>
+              <h4>Most Demanding Technology</h4>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 col-lg-4 item custom-margin-bottom">
+            <div class="card p-0 no-hover">
+              <i class="icon fas fa-lightbulb"></i>
+              <h4>Versatile Applications</h4>
             </div>
           </div>
         </div>
       </div>
     </section>
+
+    <div id="section6" style="background-color: #fff">
+      <div class="container py-5">
+        <div class="col-12 col-md-12">
+          <h3 class="text-center m-0">Also Includes</h3>
+          <div class="row mt-4 justify-content-center">
+            <ul class="col-md-4 list-unstyled">
+              <li
+                class="mb-3 d-flex align-items-center"
+                style="font-size: 1.2rem"
+              >
+                <i class="fa fa-play mr-2" aria-hidden="true"></i> Doubt
+                Clearing Sessions
+              </li>
+              <li
+                class="mb-3 d-flex align-items-center"
+                style="font-size: 1.2rem"
+              >
+                <i class="fa fa-play mr-2" aria-hidden="true"></i> Mentorship
+                Sessions
+              </li>
+              <li
+                class="mb-3 d-flex align-items-center"
+                style="font-size: 1.2rem"
+              >
+                <i class="fa fa-play mr-2" aria-hidden="true"></i> Real Time
+                Projects
+              </li>
+            </ul>
+            <ul class="col-md-4 list-unstyled">
+              <li
+                class="mb-3 d-flex align-items-center"
+                style="font-size: 1.2rem"
+              >
+                <i class="fa fa-play mr-2" aria-hidden="true"></i> Full Day
+                Practice Labs
+              </li>
+              <li
+                class="mb-3 d-flex align-items-center"
+                style="font-size: 1.2rem"
+              >
+                <i class="fa fa-play mr-2" aria-hidden="true"></i> Industry
+                Expert Guest Lectures
+              </li>
+              <li
+                class="mb-3 d-flex align-items-center"
+                style="font-size: 1.2rem"
+              >
+                <i class="fa fa-play mr-2" aria-hidden="true"></i>Internship &
+                Job Opportunities
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- Features -->
     <section
       id="features"
@@ -1900,7 +2139,8 @@
                         >
                           <path
                             d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z"
-                          /></svg></a>
+                          /></svg
+                      ></a>
                     </li>
                   </ul>
                   <div class="pt-2">
